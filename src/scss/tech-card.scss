@@ -1,0 +1,29 @@
+@import 'go-btn.scss';
+
+$tech-card-bg-color: #fff;
+$tech-card-border: 1px solid #eaeaea;
+
+.tech-card {
+  display: flex;
+  padding: 16px;
+  height: 160px;
+  width: 240px;
+  box-sizing: border-box;
+  background-color: $tech-card-bg-color;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: $tech-card-border;
+  border-radius: 6px;
+
+  & .go-button {
+    align-self: flex-end;
+  }
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 240px;
+  }
+}

@@ -1,0 +1,60 @@
+@import 'service-price.scss';
+
+$slider-price-text-color: #1b1c21;
+$slider-price__arrow-bg: url('../img/arrow-to-right.svg') 50% 50% no-repeat;
+
+.slider-price {
+  &__get-kp {
+    display: inline-block;
+    width: 208px;
+    text-align: left;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $slider-price-text-color;
+
+    @media (min-width: 768px) {
+      width: 420px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    background: $slider-price__arrow-bg;
+  }
+
+  &__info {
+    padding: 0 16px;
+    margin: 0;
+    width: 288px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      padding: 0 24px;
+      width: 421px;
+      margin-bottom: 47px;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 0 32px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $slider-price-text-color;
+  }
+}

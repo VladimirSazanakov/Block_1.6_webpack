@@ -1,0 +1,217 @@
+@import 'button-round.scss';
+@import 'mobile-header.scss';
+
+$mobile-menu-bg: #fff;
+$mobile-menu-shadow: 16px 0 52px rgba(14, 24, 80, 0.2),
+  -2px 0 4px rgba(69, 79, 126, 0.02);
+$mobile-menu-item-color: #1b1c21;
+$mobile-menu-item-active: #7e7e82;
+$active-before-bg: url('../img/highlight.svg') no-repeat;
+$lang-item-shadow: 0 0 2px 2px grey;
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  position: fixed;
+  display: flex;
+  /*display: none;*/
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  min-width: 320px;
+  height: 100vh;
+  background: $mobile-menu-bg;
+  box-shadow: $mobile-menu-shadow;
+  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /*-----------mobile-menu-main---------------*/
+
+  &__nav {
+    display: block;
+    padding: 0;
+    padding-left: 24px;
+    margin: 0;
+    margin-bottom: auto;
+    font-family: 'TT Lakes', sans-serif;
+  }
+
+  &__items {
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+    text-decoration: none;
+    color: $mobile-menu-item-color;
+    transition: all 0.3s ease;
+  }
+
+  &__item:hover,
+  &__items:focus {
+    transform: scale(1.2) translate(28px);
+    font-weight: bold;
+  }
+
+  &__item--active {
+    text-decoration: none;
+    color: $mobile-menu-item-active;
+  }
+
+  &__item--active::before {
+    content: '';
+    top: 0px;
+    left: -24px;
+    display: inline-block;
+    position: absolute;
+    width: 4px;
+    height: 32px;
+    background: $active-before-bg;
+  }
+
+  /*----------mobile-menu-footer------------*/
+
+  &__footer {
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 24px;
+    padding-bottom: 32px;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    color: $mobile-menu-item-color;
+  }
+
+  &__contacts {
+    margin-bottom: 40px;
+  }
+
+  &__btn-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__btn-layout {
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  &__contacts-mail {
+    display: block;
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+
+  &__contacts-mail:hover,
+  &__contacts-mail:focus {
+    transform: scale(1.2) translate(28px);
+    font-weight: bold;
+  }
+
+  &__contacts-number {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__lang-items {
+    display: block;
+    list-style: none;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    color: $mobile-menu-item-color;
+  }
+
+  &__lang-items-layout {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-right: 7px;
+    text-transform: uppercase;
+  }
+
+  &__lang-item {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    color: inherit;
+  }
+
+  &__lang-item--active {
+    color: $mobile-menu-item-active;
+  }
+
+  &__lang-item:hover,
+  &__lang-item:focus {
+    transform: scale(1.2) translate(0, -5px);
+    font-weight: bold;
+    box-shadow: $lang-item-shadow;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 360px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: 320px;
+  }
+
+  @media (min-width: 1366px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 320px;
+    box-shadow: none;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 0;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 320px;
+    box-shadow: none;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 0;
+  }
+}

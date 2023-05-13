@@ -1,0 +1,19 @@
+@import 'modal.scss';
+
+.call {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 8;
+  transition: all 0.8s;
+
+  &.open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    z-index: 8;
+  }
+}

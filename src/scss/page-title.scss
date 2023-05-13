@@ -1,0 +1,77 @@
+$highlight-background: url('../img/highlight.svg') no-repeat;
+$font-color: #1b1c21;
+
+@mixin items-font() {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $font-color;
+}
+
+.page-title {
+  padding-left: 16px;
+
+  &__title-layout {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__title-layout::before {
+    position: absolute;
+    left: -16px;
+    content: '';
+    display: inline-block;
+    background: $highlight-background;
+    width: 4px;
+    height: 42px;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      left: -24px;
+    }
+    @media (min-width: 1440px) {
+      left: -32px;
+    }
+  }
+
+  &__title {
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: $font-color;
+  }
+
+  &__title-buttons {
+    display: none;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    @media (min-width: 1366px) {
+      display: flex;
+    }
+  }
+
+  &__title-button {
+    display: flex;
+    margin-right: 32px;
+  }
+
+  &__title-btn {
+    display: flex;
+    margin: auto;
+    margin-right: 8px;
+    @include items-font;
+  }
+  @media (min-width: 768px) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 32px;
+  }
+}

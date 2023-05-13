@@ -1,0 +1,26 @@
+@import '../fonts/TTLakes.css';
+@import 'page.scss';
+@import 'button-round.scss';
+@import 'header.scss';
+@import 'page-title.scss';
+@import 'slider.scss';
+@import 'main-content.scss';
+@import 'service-software.scss';
+@import 'service-tech.scss';
+@import 'slider-price.scss';
+@import 'page-footer';
+@import 'mobile-menu.scss';
+@import 'overlay.scss';
+@import 'feedback.scss';
+@import 'call.scss';
+
+.body {
+  padding: 0;
+  margin: 0;
+  font-family: 'TT Lakes', sans-serif;
+  overflow: auto;
+
+  &--lock {
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,17 @@
+$go-btn-background: url('../img/go.svg');
+
+.go-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: $go-btn-background;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 red, inset 0 0 7px 0 rgba(255, 0, 0, 0.589);
+    transform: scale(1.1);
+  }
+}

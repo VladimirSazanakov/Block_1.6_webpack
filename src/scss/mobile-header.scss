@@ -1,0 +1,42 @@
+.mobile-header {
+  display: flex;
+  height: 88px;
+  min-height: 88px;
+  margin: 0;
+  padding: 0;
+  padding-left: 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33px;
+
+  &__layout {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__cancel {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-right: 16px;
+    background-color: red;
+    border-radius: 50%;
+
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto 24px;
+    background-color: red;
+    border-radius: 50%;
+  }
+}

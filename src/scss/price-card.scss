@@ -1,0 +1,95 @@
+$price-card-bg-color: #fff;
+$price-card-border: 1px solid #eaeaea;
+$price-card-item-title-color: #7e7e82;
+$price-card-item-value-color: #1b1c21;
+$price-card-order-bg: url('../img/order.png') 50% 50% no-repeat;
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 200px;
+  width: 260px;
+  box-sizing: border-box;
+  background-color: $price-card-bg-color;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: $price-card-border;
+  border-radius: 6px;
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  &__time-order-layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item-title {
+    color: $price-card-item-title-color;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom: 4px;
+    opacity: 0.72;
+  }
+
+  &__item-value {
+    line-height: 18px;
+    text-align: left;
+    vertical-align: top;
+    letter-spacing: 0.2px;
+    color: $price-card-item-value-color;
+  }
+
+  &__order {
+    display: inline-block;
+    align-self: flex-end;
+    background: $price-card-order-bg;
+    height: 32px;
+    width: 119px;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+
+  &__order:hover {
+    box-shadow: 0 0 5px 0 red, inset 0 0 7px 0 rgba(255, 0, 0, 0.589);
+    transform: scale(1.1);
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 3fr 1fr 2fr;
+    align-items: center;
+    height: 64px;
+    border: none;
+    border-radius: 0;
+
+    &__item-title {
+      display: none;
+    }
+
+    &__time-order-layout {
+      align-items: center;
+    }
+
+    &__item-value {
+      align-self: auto;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    padding: 16px 24px;
+    align-items: center;
+    height: 64px;
+    border: none;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,119 @@
+@import 'button-round.scss';
+
+$modal-bg: white;
+$modal-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+  16px 0px 52px rgba(14, 24, 80, 0.2);
+$modal-border: 1px solid lightgreen;
+$modal-text-color: #1b1c21;
+$modal-header-after-bg: url('../img/highlight.svg');
+$modal-input-border: 1px solid #eaeaea;
+$modal-note-text-color: #7e7e82;
+$modal-hilight-text: #ff3e79;
+
+.modal {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 440px;
+    height: 100vh;
+    background-color: $modal-bg;
+    padding: 16px;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    box-shadow: $modal-shadow;
+
+    @media (min-width: 1366px) {
+      padding-top: 0;
+    }
+  }
+
+  &__cancel-btn-layout {
+    width: auto;
+    height: 40px;
+    transition: all 0.3s;
+
+    @media (min-width: 1366px) {
+      .modal.open & {
+        position: absolute;
+        width: 40px;
+        transform: translate(-90px, 35px);
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    color: $modal-text-color;
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 40px;
+      position: absolute;
+      left: -16px;
+      top: -6px;
+      background: $modal-header-after-bg;
+    }
+  }
+
+  &__input {
+    width: auto;
+    height: 48px;
+    font-family: 'TT Lakes';
+    border: $modal-input-border;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+  }
+
+  &__textarea {
+    width: auto;
+    height: 118px;
+    resize: none;
+    font-family: 'TT Lakes';
+    border: $modal-input-border;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: $modal-note-text-color;
+    padding: 0;
+    margin-bottom: 19px;
+  }
+
+  &__red-text {
+    color: $modal-hilight-text;
+  }
+
+  &__send-btn {
+    width: 136px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 16px;
+    align-self: flex-end;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 5px 0 red, inset 0 0 7px 0 rgba(255, 0, 0, 0.589);
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$botton-round-shadow-color: rgb(173, 10, 10);
+
+.button-round {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.button-round:hover,
+.button-round:focus {
+  box-shadow: 0 0 5px 0 $botton-round-shadow-color;
+  transform: scale(1.2);
+}

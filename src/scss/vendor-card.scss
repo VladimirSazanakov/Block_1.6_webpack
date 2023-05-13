@@ -1,0 +1,24 @@
+@import 'go-btn.scss';
+$vendor-card-background: #fff;
+$vendor-card-border: 1px solid #eaeaea;
+
+.vendor-card {
+  display: flex;
+  padding: 0 16px;
+  height: 72px;
+  width: 240px;
+  box-sizing: border-box;
+  background-color: $vendor-card-background;
+  justify-content: space-between;
+  align-items: center;
+  border: $vendor-card-border;
+  border-radius: 6px;
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 240px;
+  }
+}
