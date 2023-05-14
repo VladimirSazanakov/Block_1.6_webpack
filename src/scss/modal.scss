@@ -25,6 +25,8 @@ $modal-hilight-text: #ff3e79;
     line-height: 24px;
     letter-spacing: -0.2px;
     box-shadow: $modal-shadow;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     @media (min-width: 1366px) {
       padding-top: 0;
