@@ -72,6 +72,7 @@ $modal-hilight-text: #ff3e79;
   &__input {
     width: auto;
     height: 48px;
+    min-height: 48px;
     font-family: 'TT Lakes';
     border: $modal-input-border;
     border-radius: 8px;

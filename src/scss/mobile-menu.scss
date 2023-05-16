@@ -15,7 +15,6 @@ $lang-item-shadow: 0 0 2px 2px grey;
   z-index: 8;
   position: fixed;
   display: flex;
-  /*display: none;*/
   flex-direction: column;
   top: 0;
   left: 0;
@@ -181,7 +180,7 @@ $lang-item-shadow: 0 0 2px 2px grey;
     transform: translateX(0);
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 390px) {
     width: 100%;
   }
 
@@ -189,7 +188,7 @@ $lang-item-shadow: 0 0 2px 2px grey;
     width: 320px;
   }
 
-  @media (min-width: 1366px) {
+  @media (min-width: 1200px) {
     position: relative;
     top: 0;
     left: 0;

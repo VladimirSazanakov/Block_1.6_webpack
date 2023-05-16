@@ -1,9 +1,15 @@
 $text-color: #1b1c21;
 $more-btn-before-background: url('../img/more.svg') no-repeat;
+$fade-background: linear-gradient(
+  to top,
+  #f8f8f8 0.04%,
+  rgba(248, 248, 248, 0.0001) 100%
+);
 
 .main-content {
   display: flex;
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   flex-direction: column;
   align-items: flex-start;
@@ -15,20 +21,36 @@ $more-btn-before-background: url('../img/more.svg') no-repeat;
   }
 
   &__text {
+    position: relative;
     margin: 0;
     margin-bottom: 16px;
     font-size: 14px;
     max-height: 90px;
     color: $text-color;
     overflow: hidden;
-    transition: all 0.8s linear;
+    transition: max-height 0.5s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      margin: 0;
+      padding: 0;
+      height: 40px;
+      width: 100%;
+      background: $fade-background;
+    }
 
     @media (min-width: 768px) {
       max-height: 160px;
     }
 
     &--show-all {
-      max-height: 1000px;
+      max-height: 500px;
+      &::after {
+        display: none;
+      }
     }
   }
 
