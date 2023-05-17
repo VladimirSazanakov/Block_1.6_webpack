@@ -83,6 +83,7 @@ $modal-hilight-text: #ff3e79;
   &__textarea {
     width: auto;
     height: 118px;
+    min-height: 118px;
     resize: none;
     font-family: 'TT Lakes';
     border: $modal-input-border;
